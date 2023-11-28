@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "aoc-2023"
+version = "0.1.0"
+description = "My attempt on Advent of Code 2023"
+authors = ["Mart Clanor <mart.dayniel.clanor@witteveenbos.com>"]
+readme = "README.md"
+packages = [{include = "aoc_2023"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.5.0"
+ipykernel = "^6.27.1"
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "primary"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

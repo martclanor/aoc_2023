@@ -1,0 +1,39 @@
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+    -   id: check-yaml
+    -   id: check-json
+    -   id: check-case-conflict
+    -   id: debug-statements
+    -   id: end-of-file-fixer
+    -   id: trailing-whitespace
+    -   id: mixed-line-ending
+    -   id: check-added-large-files
+- repo: https://github.com/python-poetry/poetry
+  rev: '1.7.0'
+  hooks:
+    - id: poetry-check
+-   repo: https://github.com/psf/black
+    rev: 23.11.0
+    hooks:
+    -   id: black
+-   repo: https://github.com/pre-commit/mirrors-isort
+    rev: v5.10.1
+    hooks:
+    -   id: isort
+        args: ["--profile", "black",]
+-   repo: https://github.com/PyCQA/flake8
+    rev: 6.1.0
+    hooks:
+    -   id: flake8
+        args: # arguments to configure flake8
+        # making isort line length compatible with black
+        - "--max-line-length=88"
+        - "--max-complexity=18"
+        - "--select=B,C,E,F,W,T4,B9"
+
+        # these are errors that will be ignored by flake8
+        # check out their meaning here
+        # https://flake8.pycqa.org/en/latest/user/error-codes.html
+        - "--ignore=E501,W503"
