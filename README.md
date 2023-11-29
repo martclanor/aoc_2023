@@ -6,4 +6,4 @@ Advent of Code is an annual coding challenge where participants solve programmin
 
 This repository contains my solutions for the Advent of Code 2023 challenge with python.
 
-Each day has its own directory containing the question, input files and solution code.
+Each day has its own directory containing the question, and solution.
